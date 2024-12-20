@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Name}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .post {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .post h1 {
+            margin-top: 0;
+        }
+        .post .date {
+            font-size: 0.9em;
+            color: #888;
+        }
+        .post .user {
+            font-size: 0.9em;
+            color: #333;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="post">
+        <h1>{{.Name}}</h1>
+        <p class="date">Published on: {{.Date}}</p>
+        <p>{{.Body}}</p>
+        <p class="user">Written by: {{.User}}</p>
+    </div>
+
+    <a href="/" class="back-link">Back to Posts</a>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta Name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .post {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        .post .Date {
+            font-size: 0.9em;
+            color: #888;
+        }
+        .post .User {
+            font-size: 0.9em;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Blog Posts</h1>
+    
+    {{range .}}
+    <div class="post">
+        <h2><a href="/post/{{.ID}}">{{.Name}}</a></h2>
+        <p class="date">Published on: {{.Date}}</p>
+        <p class="user">Written by: {{.User}}</p>
+    </div>
+    {{end}}
+
+</body>
+</html>
